@@ -37,14 +37,14 @@ export default function HeroSection(props) {
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center z-10">
         <h1
-          className={`${cormorantGaramond.className} text-0.5xl md:text-2xl font-bold mb-2 opacity-100`}
+          className={`${cormorantGaramond.className} text-1xl md:text-2xl font-bold mb-2 opacity-100`}
         >
           {title}
         </h1>
         <p
           className={`${
             cormorantGaramond.className
-          } text-6xl md:text-8xl mb-1 transition-opacity duration-1000 
+          } text-4xl md:text-8xl mb-1 transition-opacity duration-1000 
             ${showLineOne ? "opacity-100" : "opacity-0"}`}
         >
           {lineOne}
@@ -52,7 +52,7 @@ export default function HeroSection(props) {
         <p
           className={`${
             cormorantGaramond.className
-          } text-6xl md:text-8xl transition-opacity duration-1000
+          } text-4xl md:text-8xl transition-opacity duration-1000
             ${showLineTwo ? "opacity-100" : "opacity-0"}`}
         >
           {lineTwo}
