@@ -23,7 +23,9 @@ export default function Navbar() {
 
   return (
     // Main navigation container - removed shadow-lg class for a flat design
-    <nav className={`bg-white ${cormorantGaramond.className}`}>
+    <nav
+      className={`bg-white ${cormorantGaramond.className} fixed top-0 w-full z-50`}
+    >
       {/* This wrapper helps center the content and set a max-width */}
       <div className="max-w-10xl mx-auto">
         {/* This flex container organizes the logo and navigation items */}

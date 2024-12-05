@@ -43,7 +43,7 @@ export default function Footer() {
       <div className="max-w-10xl mx-auto py-8 px-7">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           <div className="text-center md:text-left order-1 md:order-none">
-            <p className="text-white text-xl font-bold flex items-center justify-center md:justify-start">
+            <p className="text-white text-md md:text-lg font-bold flex items-center justify-center md:justify-start">
               Last Mile Enterprises Limited
               <FaRegCopyright size={16} className="mx-2" />
               {new Date().getFullYear()}
@@ -59,7 +59,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon size={24} />
+                <Icon className="w-4 h-4 md:w-6 md:h-6" />
                 <span className="sr-only">{Icon.name}</span>
               </a>
             ))}
