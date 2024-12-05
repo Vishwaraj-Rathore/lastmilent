@@ -45,7 +45,9 @@ export default function ProductCarousel() {
         >
           Products That Make A Difference
         </h2>
-        <p className="text-center text-base lg:text-lg max-w-2xl mx-auto mb-6">
+        <p
+          className={`text-center text-base lg:text-2xl max-w-2xl mx-auto mb-6 ${cormorantGaramond.className}`}
+        >
           LMEL is engaged in promoting affordable, sturdy, and environmentally
           friendly products, seeing the impact of our investments fills us with
           zest and even more conviction to continue on the same path.
