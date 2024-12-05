@@ -7,12 +7,9 @@ import { cormorantGaramond } from "../app/fonts/fonts";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-  // We use this state to control the visibility of our mobile menu
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  // We store navigation items in an array to make the code more maintainable
-  // You can easily add or modify navigation items by updating this array
   const navigationItems = [
     { name: "Home", path: "/" },
     { name: "SunBless", path: "/sunbless" },
@@ -22,15 +19,11 @@ export default function Navbar() {
   ];
 
   return (
-    // Main navigation container - removed shadow-lg class for a flat design
     <nav
       className={`bg-white ${cormorantGaramond.className} fixed top-0 w-full z-50`}
     >
-      {/* This wrapper helps center the content and set a max-width */}
       <div className="max-w-10xl mx-auto">
-        {/* This flex container organizes the logo and navigation items */}
         <div className="flex justify-between items-center h-20">
-          {/* Logo container - positioned at the far left with no extra padding */}
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center -ml-0 pl-7">
               <Image
@@ -39,38 +32,35 @@ export default function Navbar() {
                 width={120}
                 height={40}
                 className="object-contain"
-                priority={true} // This prevents the logo from blinking on page load
+                priority={true}
               />
             </Link>
           </div>
 
-          {/* Desktop navigation menu - hidden on mobile screens */}
-          <div className="hidden md:flex items-center justify-end flex-1 mr-4 pr-7">
+          <div className="hidden lg:flex items-center justify-end flex-1 mr-4 pr-7">
             {navigationItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.path}
                 className={`px-5 py-2 rounded-md text-xl font-medium transition-colors last:pr-0
-                  ${
-                    pathname === item.path
-                      ? "text-blue-600 font-bold"
-                      : "text-black hover:text-gray-400"
-                  }`}
+                 ${
+                   pathname === item.path
+                     ? "text-blue-600 font-bold"
+                     : "text-black hover:text-gray-400"
+                 }`}
               >
                 {item.name}
               </Link>
             ))}
           </div>
 
-          {/* Mobile menu button - only appears on mobile screens */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-black hover:text-gray-400  pr-7"
               aria-expanded={isMobileMenuOpen}
               aria-label="Toggle navigation menu"
             >
-              {/* Animated hamburger menu icon */}
               <div className="w-6 h-6 flex flex-col justify-between">
                 <span
                   className={`block w-full h-0.5 bg-current transform transition-transform ${
@@ -93,9 +83,8 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile navigation menu - slides in when hamburger is clicked */}
       <div
-        className={`md:hidden ${isMobileMenuOpen ? "block" : "hidden"}`}
+        className={`lg:hidden ${isMobileMenuOpen ? "block" : "hidden"}`}
         aria-label="Mobile navigation menu"
       >
         <div className="pl-6 px-2 pt-2 pb-3 space-y-1">
@@ -104,12 +93,12 @@ export default function Navbar() {
               key={item.name}
               href={item.path}
               className={`block px-3 py-2 rounded-md text-base font-medium
-                ${
-                  pathname === item.path
-                    ? "text-blue-600 font-bold bg-gray-50"
-                    : "text-black hover:text-gray-400"
-                }`}
-              onClick={() => setIsMobileMenuOpen(false)} // Closes the mobile menu when a link is clicked
+               ${
+                 pathname === item.path
+                   ? "text-blue-600 font-bold bg-gray-50"
+                   : "text-black hover:text-gray-400"
+               }`}
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               {item.name}
             </Link>
