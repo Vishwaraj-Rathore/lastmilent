@@ -15,9 +15,9 @@ export default function Home() {
        lineTwo="impactful results."
      />
      
-     <section className="w-full h-[calc(100vh-80px)] flex flex-col-reverse lg:flex-row">
-       {/* Text Container - Mobile: Bottom, Desktop: Right */}
-       <div className="w-full lg:w-1/2 h-1/2 lg:h-full flex flex-col justify-center items-center p-8 lg:p-16 bg-white">
+     <section className="w-full h-[calc(100vh-80px)] flex flex-col lg:flex-row">
+       {/* Text Container - Mobile: Top, Desktop: Right */}
+       <div className="w-full lg:w-1/2 h-1/2 lg:h-full flex flex-col justify-center items-center p-8 lg:p-16 bg-white order-1 lg:order-2">
          <div className="max-w-xl text-center lg:text-left">
            <h2 className={`
              ${cormorantGaramond.className} 
@@ -49,8 +49,8 @@ export default function Home() {
          </div>
        </div>
 
-       {/* Image Container - Mobile: Top, Desktop: Left */}
-       <div className="w-full lg:w-1/2 h-1/2 lg:h-full relative flex items-center justify-center">
+       {/* Image Container - Mobile: Bottom, Desktop: Left */}
+       <div className="w-full lg:w-1/2 h-1/2 lg:h-full relative flex items-center justify-center order-2 lg:order-1">
          <div className="w-11/12 lg:w-1/2 h-3/4 relative">
            <Image 
              src={aboutImage}
