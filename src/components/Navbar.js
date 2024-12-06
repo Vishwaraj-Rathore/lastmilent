@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`bg-white ${cormorantGaramond.className} fixed top-0 w-full z-50`}
+      className={`bg-white bg-opacity-80 backdrop-filter backdrop-blur-md ${cormorantGaramond.className} fixed top-0 w-full z-50`}
     >
       <div className="max-w-10xl mx-auto">
         <div className="flex justify-between items-center h-20">
