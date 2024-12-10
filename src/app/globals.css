@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ClientSpotlights Animations */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-scrollLeft {
+  animation: scrollLeft 10s linear infinite;
+}
+
+.animate-scrollRight {
+  animation: scrollRight 10s linear infinite;
+}
+
+.object-contain {
+  display: block;
+  object-fit: contain;
+}
