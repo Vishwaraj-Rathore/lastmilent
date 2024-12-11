@@ -4,25 +4,25 @@ import Image from "next/image";
 import { cormorantGaramond } from "../app/fonts/fonts";
 
 const ClientSpotlights = () => {
-  const [band1State, setBand1State] = useState("running");
-  const [band2State, setBand2State] = useState("running");
+  const [isPaused1, setIsPaused1] = useState(false);
+  const [isPaused2, setIsPaused2] = useState(false);
 
   const row1Clients = [
-    { id: 1, src: "/band1.png", alt: "Sun Pharma", width: 250, height: 125 },
+    { id: 1, src: "/band1.png", alt: "Sun Pharma", width: 200, height: 50 },
     {
       id: 2,
       src: "/band2.png",
       alt: "World Trade Center Mumbai",
-      width: 250,
-      height: 125,
+      width: 200,
+      height: 50,
     },
-    { id: 3, src: "/band3.png", alt: "RNG Exports", width: 250, height: 125 },
+    { id: 3, src: "/band3.png", alt: "RNG Exports", width: 200, height: 50 },
   ];
 
   const row2Clients = [
-    { id: 4, src: "/band4.png", alt: "Sudarshan", width: 250, height: 125 },
-    { id: 5, src: "/band5.png", alt: "Evonik", width: 250, height: 125 },
-    { id: 6, src: "/band6.png", alt: "Sudarshan", width: 250, height: 125 },
+    { id: 4, src: "/band4.png", alt: "Sudarshan", width: 200, height: 50 },
+    { id: 5, src: "/band5.png", alt: "Evonik", width: 200, height: 50 },
+    { id: 6, src: "/band6.png", alt: "Sudarshan", width: 200, height: 50 },
   ];
 
   return (
@@ -31,56 +31,74 @@ const ClientSpotlights = () => {
       style={{ height: "calc(100vh - 80px)" }}
     >
       <h2
-        className={`text-center text-xl font-semibold mb-6 ${cormorantGaramond.className}`}
+        className={`text-center text-4xl font-semibold mb-10 ${cormorantGaramond.className}`}
       >
         Client Spotlights
       </h2>
-      {/* Band 1 */}
-      <div
-        className="flex items-center overflow-hidden w-full"
-        onMouseEnter={() => setBand1State("paused")}
-        onMouseLeave={() => setBand1State("running")}
-      >
+
+      {/* First Row - Right to Left */}
+      <div className="w-full overflow-hidden">
         <div
-          className="flex animate-scrollLeft whitespace-nowrap"
-          style={{
-            animationPlayState: band1State,
-          }}
+          className="flex items-center"
+          onMouseEnter={() => setIsPaused1(true)}
+          onMouseLeave={() => setIsPaused1(false)}
         >
-          {[...row1Clients, ...row1Clients].map((client, index) => (
-            <Image
-              key={index}
-              src={client.src}
-              alt={client.alt}
-              width={client.width}
-              height={client.height}
-              className="mx-2 object-contain"
-            />
-          ))}
+          <div
+            className={`flex gap-8 animate-scroll-left ${
+              isPaused1 ? "pause-animation" : ""
+            }`}
+          >
+            {[
+              ...row1Clients,
+              ...row1Clients,
+              ...row1Clients,
+              ...row1Clients,
+            ].map((client, index) => (
+              <div key={`${client.id}-${index}`} className="flex-shrink-0">
+                <Image
+                  src={client.src}
+                  alt={client.alt}
+                  width={client.width}
+                  height={client.height}
+                  className="object-contain w-[150px] md:w-[200px]"
+                  priority={index < 3}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-      {/* Band 2 */}
-      <div
-        className="flex items-center overflow-hidden w-full mt-4"
-        onMouseEnter={() => setBand2State("paused")}
-        onMouseLeave={() => setBand2State("running")}
-      >
+
+      {/* Second Row - Left to Right */}
+      <div className="w-full overflow-hidden mt-8">
         <div
-          className="flex animate-scrollRight whitespace-nowrap"
-          style={{
-            animationPlayState: band2State,
-          }}
+          className="flex items-center"
+          onMouseEnter={() => setIsPaused2(true)}
+          onMouseLeave={() => setIsPaused2(false)}
         >
-          {[...row2Clients, ...row2Clients].map((client, index) => (
-            <Image
-              key={index}
-              src={client.src}
-              alt={client.alt}
-              width={client.width}
-              height={client.height}
-              className="mx-2 object-contain"
-            />
-          ))}
+          <div
+            className={`flex gap-8 animate-scroll-right ${
+              isPaused2 ? "pause-animation" : ""
+            }`}
+          >
+            {[
+              ...row2Clients,
+              ...row2Clients,
+              ...row2Clients,
+              ...row2Clients,
+            ].map((client, index) => (
+              <div key={`${client.id}-${index}`} className="flex-shrink-0">
+                <Image
+                  src={client.src}
+                  alt={client.alt}
+                  width={client.width}
+                  height={client.height}
+                  className="object-contain w-[150px] md:w-[200px]"
+                  priority={index < 3}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

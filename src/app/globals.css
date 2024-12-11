@@ -2,34 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ClientSpotlights Animations */
-@keyframes scrollLeft {
+@layer utilities {
+  .animate-scroll-left {
+    animation: scroll-left 30s linear infinite;
+  }
+
+  .animate-scroll-right {
+    animation: scroll-right 30s linear infinite;
+  }
+
+  .pause-animation {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes scroll-left {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(calc(-100% - 4rem));
   }
 }
 
-@keyframes scrollRight {
+@keyframes scroll-right {
   0% {
-    transform: translateX(0);
+    transform: translateX(calc(-100% - 4rem));
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
-}
-
-.animate-scrollLeft {
-  animation: scrollLeft 10s linear infinite;
-}
-
-.animate-scrollRight {
-  animation: scrollRight 10s linear infinite;
-}
-
-.object-contain {
-  display: block;
-  object-fit: contain;
 }

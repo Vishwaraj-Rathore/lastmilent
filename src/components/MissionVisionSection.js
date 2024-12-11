@@ -35,15 +35,17 @@ const MissionVisionValues = () => {
             key={section}
             onClick={() => handleSectionChange(section)}
             className={`
-              flex items-center gap-1 xs:gap-2 
+              flex items-center gap-2 xs:gap-3
               px-2 xs:px-4 sm:px-6 py-1 xs:py-2 sm:py-3
               transition-all duration-300 
               text-xs xs:text-sm sm:text-base
               ${activeSection === section ? "text-navy" : "text-gray-500"}
             `}
           >
-            <FaLeaf className="text-sm xs:text-base sm:text-xl" />
-            <span className={`${cormorantGaramond.className} capitalize`}>
+            <FaLeaf className="text-base xs:text-lg sm:text-2xl" />
+            <span
+              className={`${cormorantGaramond.className} capitalize text-base xs:text-lg sm:text-xl`}
+            >
               {section}
             </span>
           </button>
