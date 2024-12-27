@@ -20,7 +20,7 @@ export default function WeGoBeyond() {
     >
       <h1 className="text-4xl md:text-5xl mb-4 text-center">We Go Beyond</h1>
       <p className="text-lg md:text-xl mb-12 text-center">
-        Get your investment's worth, read on to know all that you can gain.
+        {"Get your investment's worth, read on to know all that you can gain."}
       </p>
 
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
