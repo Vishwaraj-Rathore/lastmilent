@@ -4,6 +4,7 @@ import ChallengesSection from "../../components/ChallengesSection";
 import WeGoBeyond from "../../components/WeGoBeyond";
 import WideApplications from "../../components/WideApplications";
 import FeaturesGrid from "../../components/FeaturesGrid";
+import ClientSpotlights from "../../components/ClientSpotlights";
 
 export default function SunBless() {
   const challenges = [
@@ -57,6 +58,7 @@ export default function SunBless() {
           "/sunfea6.png",
         ]}
       />
+      <ClientSpotlights />
     </>
   );
 }
