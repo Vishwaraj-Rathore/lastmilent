@@ -16,11 +16,11 @@ export default function WeGoBeyond() {
 
   return (
     <section
-      className={`${cormorantGaramond.className} h-[calc(100vh-80px)] flex flex-col justify-center max-w-6xl mx-auto px-4`}
+      className={`${cormorantGaramond.className} min-h-[calc(100vh-80px)] flex flex-col justify-center max-w-6xl mx-auto px-4 py-16`}
     >
       <h1 className="text-4xl md:text-5xl mb-4 text-center">We Go Beyond</h1>
       <p className="text-lg md:text-xl mb-12 text-center">
-        {"Get your investment's worth, read on to know all that you can gain."}
+        Get your investment's worth, read on to know all that you can gain.
       </p>
 
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
@@ -33,11 +33,11 @@ export default function WeGoBeyond() {
           ))}
         </div>
 
-        <div className="md:w-1/3 order-2 md:order-none">
+        <div className="md:w-1/3 order-2 md:order-none flex justify-center">
           <img
             src="/SunBless-Can-1.png"
             alt="SunBless All-Weather Protection Coating"
-            className="w-full max-w-[300px] mx-auto"
+            className="w-48 sm:w-56 md:w-64 h-auto"
           />
         </div>
 

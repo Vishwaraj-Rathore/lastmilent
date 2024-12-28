@@ -2,6 +2,8 @@ import FullPageImageWithText from "../../components/FullPageImageWithText";
 import FullPageCenteredText from "../../components/FullPageCenteredText";
 import ChallengesSection from "../../components/ChallengesSection";
 import WeGoBeyond from "../../components/WeGoBeyond";
+import WideApplications from "../../components/WideApplications";
+import FeaturesGrid from "../../components/FeaturesGrid";
 
 export default function SunBless() {
   const challenges = [
@@ -42,6 +44,19 @@ export default function SunBless() {
         challenges={challenges}
       />
       <WeGoBeyond />
+      <WideApplications />
+      <FeaturesGrid
+        title="What Sets SunBless Apart From The Rest"
+        subtitle="Rest assured with our product's robust features, ensuring some savings and your well-being"
+        features={[
+          "/sunfea1.png",
+          "/sunfea2.png",
+          "/sunfea3.png",
+          "/sunfea4.png",
+          "/sunfea5.png",
+          "/sunfea6.png",
+        ]}
+      />
     </>
   );
 }
