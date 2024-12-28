@@ -2,7 +2,13 @@
 import { cormorantGaramond } from "../app/fonts/fonts";
 import Image from "next/image";
 
-export default function FeaturesGrid({ title, subtitle, features }) {
+export default function FeaturesGrid({ title, subtitle, features = [] }) {
+  // Add default empty array
+  // Optional: Add a check for empty features
+  if (!features || features.length === 0) {
+    return null; // Or return a placeholder/loading state
+  }
+
   return (
     <section
       className={`${cormorantGaramond.className} min-h-[calc(100vh-80px)] flex flex-col justify-center items-center px-4 py-8`}
