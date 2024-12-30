@@ -1,6 +1,7 @@
 import FullPageImageWithText from "../../components/FullPageImageWithText";
 import FullPageCenteredText from "../../components/FullPageCenteredText";
 import ChallengesSection from "../../components/ChallengesSection";
+import FeaturesGrid from "../../components/FeaturesGrid";
 
 export default function FairLane() {
   const challenges = [
@@ -45,6 +46,18 @@ export default function FairLane() {
         title="Challenges addressed by LMEL’s FairLane"
         subtitle="At LMEL, we understand the importance of constructing structures that meet today’s needs and safeguard the future for generations to come."
         challenges={challenges}
+      />
+      <FeaturesGrid
+        title="We Go Beyond"
+        subtitle="Get your investment’s worth, read on to know all that you can gain."
+        features={[
+          "/fairfea1.png",
+          "/fairfea2.png",
+          "/fairfea3.png",
+          "/fairfea4.png",
+          "/fairfea5.png",
+          "/fairfea6.png",
+        ]}
       />
     </>
   );

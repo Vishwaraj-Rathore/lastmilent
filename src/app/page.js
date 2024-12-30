@@ -76,8 +76,6 @@ export default function Home() {
       <MissionVisionSection />
 
       <ProductCarousel />
-
-      <ClientSpotlights />
     </>
   );
 }
