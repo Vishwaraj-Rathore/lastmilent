@@ -51,9 +51,9 @@ const CarouselSection = () => {
           brand is nothing short of exceptional.
         </p>
         <p className="text-xl">
-          Join us on this exhilarating journey through the realms of technology
-          and innovation. Whether you're a seasoned tech enthusiast or a curious
-          newcomer, there's a place for you in the vibrant world of Corseca.
+          {
+            "Join us on this exhilarating journey through the realms of technology and innovation. Whether you're a seasoned tech enthusiast or a curious newcomer, there's a place for you in the vibrant world of Corseca."
+          }
         </p>
       </div>
 

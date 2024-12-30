@@ -8,8 +8,9 @@ const AboutSection = () => {
     >
       <div className="text-center max-w-3xl mb-20">
         <h1 className="text-3xl md:text-4xl text-[#1a2844]">
-          "Every journey begins with a single step. Let's take that step towards
-          sustainability together."
+          {
+            "Every journey begins with a single step. Let's take that step towards sustainability together."
+          }
         </h1>
       </div>
 
