@@ -55,7 +55,7 @@ const MissionVisionValues = () => {
       {/* Content Container - Mobile/Tablet: Bottom, Desktop: Right */}
       <div className="relative w-full lg:w-3/4 h-full flex-1">
         <div className="relative w-full h-full flex items-center justify-center">
-          <div className="relative w-full max-w-[90%] h-[90%]">
+          <div className="relative w-full max-w-[80%] h-[80%]">
             <Image
               src={sectionContent[activeSection].image}
               alt={`${activeSection} background`}
@@ -67,7 +67,7 @@ const MissionVisionValues = () => {
               <p
                 className={`
                   ${cormorantGaramond.className}
-                  text-[6px] xs:text-[7px] sm:text-[10px] md:text-[13px] lg:text-[13px] xl:text-[15px]
+                  text-[6px] xs:text-[7px] sm:text-[10px] md:text-[12px] lg:text-[14px] xl:text-[16px]
                   text-left leading-tight
                   max-w-[85%] ${
                     activeSection === "values" ? "max-h-[60%]" : "max-h-[80%]"

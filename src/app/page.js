@@ -58,7 +58,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full lg:w-1/2 h-1/2 lg:h-full relative flex items-center justify-center order-2 lg:order-1">
+        <div className="w-full lg:w-1/2 h-3/4 lg:h-full relative flex items-center justify-center order-2 lg:order-1">
           <div className="w-11/12 lg:w-1/2 h-3/4 relative">
             <Image
               src={aboutImage}
@@ -66,7 +66,7 @@ export default function Home() {
               fill
               priority
               placeholder="blur"
-              className="object-cover object-center rounded-lg"
+              className="object-cover object-center"
               quality={90}
             />
           </div>
