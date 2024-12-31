@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { useSwipeable } from "react-swipeable";
 import Image from "next/image";
 import { cormorantGaramond } from "../app/fonts/fonts";
@@ -94,13 +94,13 @@ export default function ProductCarousel() {
               className="absolute left-2 top-1/2 transform -translate-y-1/2 text-white z-10"
               onClick={handlePrev}
             >
-              <FaArrowLeft size={32} />
+              <BsChevronLeft size={24} className="text-gray-600" />
             </button>
             <button
               className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white z-10"
               onClick={handleNext}
             >
-              <FaArrowRight size={32} />
+              <BsChevronRight size={24} className="text-gray-600" />
             </button>
           </div>
         </div>
