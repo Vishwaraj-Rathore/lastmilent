@@ -13,7 +13,7 @@ export default function Footer() {
   const socialLinks = [
     {
       icon: FaFacebookSquare,
-      href: "https://www.facebook.com/people/Last-Mile-Enterprises/61556357176346/",
+      href: "https://www.facebook.com/profile.php?id=61556357176346",
       color: "hover:text-blue-600",
     },
     {
